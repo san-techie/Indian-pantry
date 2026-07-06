@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-chai-50 text-chai-950 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-saffron-200 text-chai-950;
+  }
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .bg-grain {
+    background-image: radial-gradient(rgba(90, 49, 27, 0.05) 1px, transparent 0);
+    background-size: 14px 14px;
+  }
+  .shadow-text {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5e8d3;
+}
+::-webkit-scrollbar-thumb {
+  background: #c97a23;
+  border-radius: 9999px;
+  border: 2px solid #f5e8d3;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a85f1a;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
