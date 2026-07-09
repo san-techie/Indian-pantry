@@ -22,7 +22,7 @@ export default function ProductCard({ product, onQuickView }: Props) {
   return (
     <article className="group relative flex flex-col">
       {/* Image */}
-      <div className="relative aspect-square overflow-hidden rounded-2xl bg-chai-100">
+      <div  onClick={() => onQuickView(product)} className="relative aspect-square overflow-hidden rounded-2xl bg-chai-100 cursor-pointer">
         <img
           src={product.image}
           alt={product.name}
@@ -74,13 +74,13 @@ export default function ProductCard({ product, onQuickView }: Props) {
               <Plus size={15} className="transition-transform group-hover/btn:rotate-90" />
               Add
             </button>
-            <button
+            {/* <button
               onClick={() => onQuickView(product)}
               className="flex h-11 w-11 items-center justify-center rounded-full bg-chai-50/95 text-chai-900 backdrop-blur-sm transition hover:bg-chai-50"
               aria-label={`Quick view ${product.name}`}
             >
               <Eye size={16} />
-            </button>
+            </button> */}
           </div>
         )}
       </div>

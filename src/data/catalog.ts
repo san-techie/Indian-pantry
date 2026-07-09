@@ -1,9 +1,27 @@
+import categoryVideo from "../assets/video.mp4";
+import image from '../assets/image.png';
+import image1 from '../assets/image_1.png';
+import image2 from '../assets/image_2.png';
+import image3 from '../assets/image_3.png';
+import image4 from '../assets/image_4.png';
+// import image5 from '../assets/image_5.png';
+import image6 from '../assets/image_6.png';
+// import image7 from '../assets/image_7.png';
+// import image8 from '../assets/image_8.png';
+import image9 from '../assets/image_9.png';
+// import image10 from '../assets/image_10.png';
+// import image11 from '../assets/image_11.png';
+import image12 from '../assets/image_12.jpg';
+
+
 export type Category = {
   id: string;
   name: string;
+  isVideo?: boolean;
+  video?: any;
   tagline: string;
   description: string;
-  image: string;
+  image?: string;
   count: number;
 };
 
@@ -26,9 +44,10 @@ export const categories: Category[] = [
   {
     id: 'rotis',
     name: 'Rotis',
+    isVideo: true,
     tagline: 'Stone-ground flatbreads',
     description: 'Hand-rolled and slow-cooked on a hot tava, just like home.',
-    image: 'https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=1200',
+   video: categoryVideo,
     count: 6,
   },
   {
@@ -36,7 +55,7 @@ export const categories: Category[] = [
     name: 'Chutneys',
     tagline: 'Small-batch condiments',
     description: 'Bright, punchy blends ground fresh from roasted spices.',
-    image: 'https://images.pexels.com/photos/4198015/pexels-photo-4198015.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: image,
     count: 8,
   },
   {
@@ -44,7 +63,7 @@ export const categories: Category[] = [
     name: 'Ready to Cook',
     tagline: 'Pantry meal kits',
     description: 'Heritage recipes, prepped and ready in under twenty minutes.',
-    image: 'https://images.pexels.com/photos/6745748/pexels-photo-6745748.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: image4,
     count: 5,
   },
   {
@@ -52,7 +71,7 @@ export const categories: Category[] = [
     name: 'Sweets',
     tagline: 'Festive confections',
     description: 'Slow-cooked treats for celebrations and everyday cravings.',
-    image: 'https://images.pexels.com/photos/18488298/pexels-photo-18488298.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: image6,
     count: 7,
   },
   {
@@ -60,7 +79,7 @@ export const categories: Category[] = [
     name: 'Thokkus',
     tagline: 'Slow-cooked relishes',
     description: 'Vegetables simmered with tempered spices into rich relishes.',
-    image: 'https://images.pexels.com/photos/5946617/pexels-photo-5946617.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: image12,
     count: 6,
   },
   {
@@ -68,7 +87,7 @@ export const categories: Category[] = [
     name: 'Makhana',
     tagline: 'Roasted fox nuts',
     description: 'Light, crunchy, protein-packed snacks roasted to order.',
-    image: 'https://images.pexels.com/photos/3768946/pexels-photo-3768946.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: image3,
     count: 4,
   },
 ];
@@ -80,8 +99,8 @@ export const products: Product[] = [
     category: 'Rotis',
     categoryId: 'rotis',
     price: 8.99,
-    image: 'https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=900',
-    hoverImage: 'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: image1,
+    hoverImage: image1,
     badge: 'bestseller',
     weight: '10 pcs',
     description: 'Gluten-free sorghum flatbreads, hand-rolled and stone-cooked for a soft, earthy bite.',
@@ -93,8 +112,8 @@ export const products: Product[] = [
     category: 'Rotis',
     categoryId: 'rotis',
     price: 8.99,
-    image: 'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=900',
-    hoverImage: 'https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: image2,
+    hoverImage: image2,
     weight: '10 pcs',
     description: 'Pearl millet rotis with a rustic, nutty flavor — a winter staple from the villages of Rajasthan.',
     tags: ['Gluten-free', 'Iron-rich'],
@@ -105,8 +124,8 @@ export const products: Product[] = [
     category: 'Rotis',
     categoryId: 'rotis',
     price: 9.49,
-    image: 'https://images.pexels.com/photos/5848478/pexels-photo-5848478.jpeg?auto=compress&cs=tinysrgb&w=900',
-    hoverImage: 'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: image9,
+    hoverImage: image9,
     badge: 'new',
     weight: '10 pcs',
     description: 'Finger millet flatbreads, deep brown and wholesome with a gentle malty aroma.',

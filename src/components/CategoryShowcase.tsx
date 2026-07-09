@@ -71,12 +71,20 @@ function CategoryCard({
       className={`group relative overflow-hidden rounded-2xl bg-chai-200 text-left shadow-soft transition-all duration-500 hover:shadow-lift ${className}`}
     >
       <div className={`relative ${large ? 'h-72 lg:h-full' : 'h-56'}`}>
-        <img
+        {category.isVideo ? <video
+    src={category.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+  /> :  <img
           src={category.image}
           alt={category.name}
           className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
           loading="lazy"
-        />
+        />}
+       
         <div className="absolute inset-0 bg-gradient-to-t from-chai-950/85 via-chai-950/20 to-transparent transition-opacity duration-500 group-hover:from-chai-950/90" />
       </div>
 

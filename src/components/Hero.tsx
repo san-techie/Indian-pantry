@@ -1,6 +1,7 @@
 import { ArrowRight, Star } from 'lucide-react';
 import { useCart } from '../store/cart';
 import { products } from '../data/catalog';
+import HeroImage from '../assets/hero_banner.jpg'
 
 type Props = {
   onShopAll: () => void;
@@ -16,13 +17,13 @@ export default function Hero({ onShopAll, onNav }: Props) {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/9792458/pexels-photo-9792458.jpeg?auto=compress&cs=tinysrgb&w=2400"
+          src={HeroImage}
           alt="Flat lay of vibrant Indian cuisine"
           className="h-full w-full object-cover"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-chai-950/70 via-chai-950/40 to-chai-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-chai-950/70 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-chai-950/70 via-chai-950/40 to-chai-950/80" /> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-chai-950/70 to-transparent" /> */}
       </div>
 
       {/* Content */}
@@ -44,7 +45,7 @@ export default function Hero({ onShopAll, onNav }: Props) {
               last. <span className="italic text-saffron-300">bite.</span>
             </h1>
 
-            <p className="animate-fade-up mt-6 max-w-md text-lg leading-relaxed text-chai-100/90 [animation-delay:120ms]">
+            <p className="animate-fade-up mt-6 max-w-md text-lg leading-relaxed text-chai-50 [animation-delay:120ms]">
               Heritage Indian flavors, handcrafted in small batches and shipped
               fresh across the USA — rotis, chutneys, sweets and more, the way
               your family made them.
